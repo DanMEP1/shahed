@@ -150,9 +150,11 @@
         <div id="shop" class="tab-content active">
             <h3 style="margin-top:0; color:#ff9f43;">Закупка листов материалов</h3>
             <div class="card"><div class="card-info"><div class="card-title">Лист фанеры</div><div class="card-sub">Цена закупки: 50 ₽</div></div><button class="btn" onclick="buyMaterial('plywood')" id="btn-buy-plywood">Купить</button></div>
-            <div class="card"><div class="card-info"><div class="card-title">Лист пластика</div><div class="card-sub">Цена закупки: 120 ₽</div></div><button class="btn" onclick="buyMaterial('plastic')" id="btn-buy-plastic">Купить</button></div>
+            <div class="card"><div class="card-info"><div class="card-title">Лист plastic</div><div class="card-sub">Цена закупки: 120 ₽</div></div><button class="btn" onclick="buyMaterial('plastic')" id="btn-buy-plastic">Купить</button></div>
             <div class="card"><div class="card-info"><div class="card-title">Лист стекловолокна</div><div class="card-sub">Цена закупки: 300 ₽</div></div><button class="btn" onclick="buyMaterial('fiberglass')" id="btn-buy-fiberglass">Купить</button></div>
             <div class="card"><div class="card-info"><div class="card-title">Лист углеволокна</div><div class="card-sub">Цена закупки: 800 ₽</div></div><button class="btn" onclick="buyMaterial('carbon')" id="btn-buy-carbon">Купить</button></div>
+            <div class="card"><div class="card-info"><div class="card-title">Старая бочка</div><div class="card-sub">Цена закупки: 3000 ₽</div></div><button class="btn" onclick="buyMaterial('barrel')" id="btn-buy-barrel">Купить</button></div>
+            <div class="card"><div class="card-info"><div class="card-title">Лист металлопрофиля</div><div class="card-sub">Цена закупки: 1200 ₽</div></div><button class="btn" onclick="buyMaterial('metal')" id="btn-buy-metal">Купить</button></div>
         </div>
 
         <!-- ВКЛАДКА: МАСТЕРСКАЯ -->
@@ -160,11 +162,12 @@
             <h3 style="margin-top:0; color:#ff9f43;">Производственный конвейер</h3>
             <p style="font-size:0.9rem; color:#aaa; margin-bottom:20px;">Запускайте сборку из купленного листа. Чем дороже материал, тем больше мини-игр!</p>
             <div class="card"><div class="card-info"><div class="card-title">Лист фанеры: <strong id="cnt-plywood">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">1 эт.</span> | Продажа за: 60 ₽</div></div><button class="btn" onclick="startCraftSequence('plywood')" id="btn-craft-plywood">Начать сборку</button></div>
-            <div class="card"><div class="card-info"><div class="card-title">Лист пластика: <strong id="cnt-plastic">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">2 эт.</span> | Продажа за: 140 ₽</div></div><button class="btn" onclick="startCraftSequence('plastic')" id="btn-craft-plastic">Начать сборку</button></div>
+            <div class="card"><div class="card-info"><div class="card-title">Лист plastic: <strong id="cnt-plastic">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">2 эт.</span> | Продажа за: 140 ₽</div></div><button class="btn" onclick="startCraftSequence('plastic')" id="btn-craft-plastic">Начать сборку</button></div>
             <div class="card"><div class="card-info"><div class="card-title">Лист стекловолокна: <strong id="cnt-fiberglass">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">3 эт.</span> | Продажа за: 355 ₽</div></div><button class="btn" onclick="startCraftSequence('fiberglass')" id="btn-craft-fiberglass">Начать сборку</button></div>
             <div class="card"><div class="card-info"><div class="card-title">Лист углеволокна: <strong id="cnt-carbon">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">4 эт.</span> | Продажа за: 1000 ₽</div></div><button class="btn" onclick="startCraftSequence('carbon')" id="btn-craft-carbon">Начать сборку</button></div>
+            <div class="card"><div class="card-info"><div class="card-title">Старая бочка: <strong id="cnt-barrel">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">4 эт.</span> | Потужнолёт за: 150 ₽</div></div><button class="btn" onclick="startCraftSequence('barrel')" id="btn-craft-barrel">Начать сборку</button></div>
+            <div class="card"><div class="card-info"><div class="card-title">Лист металлопрофиля: <strong id="cnt-metal">0 шт.</strong></div><div class="card-sub">Сложность: <span style="color:#ff9f43;">4 эт.</span> | Орешник за: 1400 ₽</div></div><button class="btn" onclick="startCraftSequence('metal')" id="btn-craft-metal">Начать сборку</button></div>
         </div>
-
         <!-- ВКЛАДКА: ПРОДАЖИ -->
         <div id="sales" class="tab-content">
             <h3 style="margin-top:0; color:#ff9f43;">Рыночный сбыт собранных дронов</h3>
@@ -172,10 +175,13 @@
             <div class="card" id="card-s-plastic" style="border-left-color: #10ac84;"><div class="card-info"><div class="card-title">БПЛА из пластика</div><div class="card-sub">На складе готово: <strong id="dr-plastic">0 шт.</strong> | Цена: 140 ₽/шт</div></div></div>
             <div class="card" id="card-s-fiberglass" style="border-left-color: #10ac84;"><div class="card-info"><div class="card-title">БПЛА из стекловолокна</div><div class="card-sub">На складе готово: <strong id="dr-fiberglass">0 шт.</strong> | Цена: 355 ₽/шт</div></div></div>
             <div class="card" id="card-s-carbon" style="border-left-color: #10ac84;"><div class="card-info"><div class="card-title">БПЛА из углеволокна</div><div class="card-sub">На складе готово: <strong id="dr-carbon">0 шт.</strong> | Цена: 1000 ₽/шт</div></div></div>
+            <div class="card" id="card-s-barrel" style="border-left-color: #10ac84;"><div class="card-info"><div class="card-title">БПЛА «Потужнолёт» (из бочки)</div><div class="card-sub">На складе готово: <strong id="dr-barrel">0 шт.</strong> | Цена: 150 ₽/шт</div></div></div>
+            <div class="card" id="card-s-metal" style="border-left-color: #10ac84;"><div class="card-info"><div class="card-title">БПЛА «Орешник» (из металлопрофиля)</div><div class="card-sub">На складе готово: <strong id="dr-metal">0 шт.</strong> | Цена: 1400 ₽/шт</div></div></div>
             <button class="btn" id="btn-sell" onclick="sellDrones()" style="background-color:#10ac84; color:white; width: 100%; padding: 12px; margin-top: 10px;">Продать все готовые изделия</button>
             <div style="margin-top: 40px; border-top: 1px dashed #555; padding-top: 15px; text-align: center;"><button class="btn" onclick="resetGame(true)" style="background-color: #444; color: #ee5253; padding: 6px 15px; font-size: 0.8rem;">Удалить сохранения и начать заново</button></div>
         </div>
     </div>
+
     <div id="mg-modal" class="modal">
         <div class="modal-content">
             <div id="mg-step" class="step-indicator">Этап 1 из X</div>
@@ -193,7 +199,9 @@
                 plywood: { cost: 50, sellPrice: 60, games: 1, count: 0, dronesReady: 0 },
                 plastic: { cost: 120, sellPrice: 140, games: 2, count: 0, dronesReady: 0 },
                 fiberglass: { cost: 300, sellPrice: 355, games: 3, count: 0, dronesReady: 0 },
-                carbon: { cost: 800, sellPrice: 1000, games: 4, count: 0, dronesReady: 0 }
+                carbon: { cost: 800, sellPrice: 1000, games: 4, count: 0, dronesReady: 0 },
+                barrel: { cost: 3000, sellPrice: 150, games: 4, count: 0, dronesReady: 0 },
+                metal: { cost: 1200, sellPrice: 1400, games: 4, count: 0, dronesReady: 0 }
             }
         };
 
@@ -341,93 +349,89 @@
                 }, delay + 900);
 
             } else if (currentGameType === 4) {
-                title.innerText = "Прошивка автопилота";
-                desc.innerText = "Введите код инициализации ядра:";
-                let code = Math.floor(1000 + Math.random() * 9000);
-                box.innerHTML = '<div style="text-align:center;"><div style="font-size:2rem; letter-spacing:5px; color:#ff9f43; margin-bottom:10px;">' + code + '</div><input type="text" id="captcha-input" style="padding:8px; font-size:1.1rem; text-align:center; width:150px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;"></div>';
-                actBtn.innerText = "ПОДТВЕРДИТЬ";
-                
-                actBtn.onclick = () => {
-                    if (document.getElementById('captcha-input').value == code) { handleStepSuccess(); } else { handleStepFail(); }
-                };
-            }
+            box.innerHTML = '<div style="text-align:center;"><div style="font-size:2rem; letter-spacing:5px; color:#ff9f43; margin-bottom:10px;">' + code + '</div><input type="text" id="captcha-input" style="padding:8px; font-size:1.1rem; text-align:center; width:150px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;"></div>';
+            actBtn.innerText = "ПОДТВЕРДИТЬ";
+            
+            actBtn.onclick = () => {
+                if (document.getElementById('captcha-input').value == code) { handleStepSuccess(); } else { handleStepFail(); }
+            };
         }
+    }
 
-        function handleStepSuccess() {
-            if (currentStep < totalSteps) {
-                currentStep++;
-                alert('Этап успешно пройден! Переходим к следующему.');
-                nextGameStep();
-            } else {
-                state.materials[currentMaterialKey].dronesReady++;
-                saveGame();
-                document.getElementById('mg-modal').style.display = 'none';
-                clearInterval(gameInterval);
-                updateUI();
-                alert('Успех! Изделие успешно собрано и ждет продажи на рынке.');
-            }
-        }
-
-        function handleStepFail() {
+    function handleStepSuccess() {
+        if (currentStep < totalSteps) {
+            currentStep++;
+            alert('Этап успешно пройден! Переходим к следующему.');
+            nextGameStep();
+        } else {
+            state.materials[currentMaterialKey].dronesReady++;
+            saveGame();
             document.getElementById('mg-modal').style.display = 'none';
             clearInterval(gameInterval);
             updateUI();
-            alert('Критическая ошибка сборки! Весь материал испорчен и отправлен в брак.');
+            alert('Успех! Изделие успешно собрано и ждет продажи на рынке.');
         }
+    }
 
-        function sellDrones() {
-            for (let key in state.materials) {
-                let mat = state.materials[key];
-                if (mat.dronesReady > 0) {
-                    state.money += mat.dronesReady * mat.sellPrice;
-                    mat.dronesReady = 0;
-                }
-            }
-            saveGame();
-            updateUI();
-        }
-
-        function updateUI() {
-            document.getElementById('money').innerText = Math.floor(state.money).toLocaleString();
-            let totalDrones = 0;
-            
-            for (let key in state.materials) { 
-                totalDrones += state.materials[key].dronesReady; 
-                document.getElementById('cnt-' + key).innerText = state.materials[key].count + ' шт.';
-                document.getElementById('dr-' + key).innerText = state.materials[key].dronesReady + ' шт.';
-                
-                let cardEl = document.getElementById('card-s-' + key);
-                if (cardEl) {
-                    if (state.materials[key].dronesReady > 0) {
-                        cardEl.style.opacity = '1';
-                    } else {
-                        cardEl.style.opacity = '0.6';
-                    }
-                }
-            }
-            document.getElementById('drones').innerText = totalDrones;
-        }
-
-        setInterval(function() {
-            let any = false;
-            for (let k in state.materials) {
-                if (document.getElementById('btn-buy-' + k)) {
-                    document.getElementById('btn-buy-' + k).disabled = state.money < state.materials[k].cost;
-                }
-                if (document.getElementById('btn-craft-' + k)) {
-                    document.getElementById('btn-craft-' + k).disabled = state.materials[k].count <= 0;
-                }
-                if (state.materials[k].dronesReady > 0) {
-                    any = true;
-                }
-            }
-            if (document.getElementById('btn-sell')) {
-                document.getElementById('btn-sell').disabled = !any;
-            }
-        }, 100);
-
-        loadGame(); 
+    function handleStepFail() {
+        document.getElementById('mg-modal').style.display = 'none';
+        clearInterval(gameInterval);
         updateUI();
-    </script>
+        alert('Критическая ошибка сборки! Весь материал испорчен и отправлен в брак.');
+    }
+
+    function sellDrones() {
+        for (let key in state.materials) {
+            let mat = state.materials[key];
+            if (mat.dronesReady > 0) {
+                state.money += mat.dronesReady * mat.sellPrice;
+                mat.dronesReady = 0;
+            }
+        }
+        saveGame();
+        updateUI();
+    }
+
+    function updateUI() {
+        document.getElementById('money').innerText = Math.floor(state.money).toLocaleString();
+        let totalDrones = 0;
+        for (let key in state.materials) { 
+            totalDrones += state.materials[key].dronesReady; 
+            document.getElementById('cnt-' + key).innerText = state.materials[key].count + ' шт.';
+            document.getElementById('dr-' + key).innerText = state.materials[key].dronesReady + ' шт.';
+            
+            let cardEl = document.getElementById('card-s-' + key);
+            if (cardEl) {
+                if (state.materials[key].dronesReady > 0) {
+                    cardEl.style.opacity = '1';
+                } else {
+                    cardEl.style.opacity = '0.6';
+                }
+            }
+        }
+        document.getElementById('drones').innerText = totalDrones;
+    }
+
+    setInterval(function() {
+        let any = false;
+        for (let k in state.materials) {
+            if (document.getElementById('btn-buy-' + k)) {
+                document.getElementById('btn-buy-' + k).disabled = state.money < state.materials[k].cost;
+            }
+            if (document.getElementById('btn-craft-' + k)) {
+                document.getElementById('btn-craft-' + k).disabled = state.materials[k].count <= 0;
+            }
+            if (state.materials[k].dronesReady > 0) {
+                any = true;
+            }
+        }
+        if (document.getElementById('btn-sell')) {
+            document.getElementById('btn-sell').disabled = !any;
+        }
+    }, 100);
+
+    loadGame(); 
+    updateUI();
+</script>
 </body>
 </html>
